@@ -1,0 +1,18 @@
+{
+    "hostname": "archlinux",
+    "bootloader": "Grub",
+    "kernels": ["linux", "linux-lts"],
+    "ntp": "true",
+    "locale_config": {
+        "sys_lang": "en_US",
+        "sys_enc": "UTF-8",
+        "kb_layout": "us"
+    },
+    "audio_config": {"audio":"pipewire"},
+    "network_config": {"type": "nm"},
+    "packages": ["git","curl","firefox"],
+    "custom_commands": [
+        "echo базовая установка завершена. запускается установщик serpantinum ...'",
+        "curl -fsSL install.serpantinum.dev | sh"
+    ]
+}

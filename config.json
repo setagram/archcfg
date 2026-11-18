@@ -1,6 +1,6 @@
 {
     "hostname": "archlinux",
-    "bootloader": "Grub",
+    "bootloader": "Systemd-boot",
     "kernels": ["linux", "linux-lts"],
     "mirror_config": {
     "custom_servers": [

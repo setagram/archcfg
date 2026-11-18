@@ -10,10 +10,6 @@
             {"url": "https://repository.su/archlinux/$repo/os/$arch"}
         ]
     },
-    "disk_config": {
-        "config_type": "pre_mounted_config",
-        "mountpoint": "/mnt/archinstall"
-    },
     "ntp": true,
     "locale_config": {
         "sys_lang": "ru_RU",

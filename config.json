@@ -2,7 +2,15 @@
     "hostname": "archlinux",
     "bootloader": "Grub",
     "kernels": ["linux", "linux-lts"],
-    "ntp": "true",
+    "mirror_config": {
+    "custom_servers": [
+            {"url": "https://mirror.yandex.ru/archlinux/$repo/os/$arch"},
+            {"url": "https://mirror.kamtv.ru/archlinux/$repo/os/$arch"},
+            {"url": "https://mirror.kpfu.ru/archlinux/$repo/os/$arch"},
+            {"url": "https://repository.su/archlinux/$repo/os/$arch"}
+        ]
+    },
+    "ntp": true,
     "locale_config": {
         "sys_lang": "ru_RU",
         "sys_enc": "UTF-8",
@@ -12,8 +20,10 @@
     "network_config": {"type": "nm"},
     "packages": ["git","curl","firefox","flatpak"],
     "custom_commands": [
-	"echo ' -- [ARCH CFG] start installing ayugram, discord, spotify'",
-        "echo ' -- [ARCH CFG] start serpantinum installator ...'",
-        "curl -fsSL install.serpantinum.dev | sh"
+        "echo ' -- [ARCH CFG] installing Happ Proxy'",
+        "wget https://github.com/Happ-proxy/happ-desktop/releases/latest/download/Happ.linux.x64.pkg.tar.zst -O /tmp/happ.pkg.tar.zst",
+        "pacman -U --noconfirm /tmp/happ.pkg.tar.zst",
+        "echo ' -- [ARCH CFG] start installing serpantinum'",
+        "curl -fsSL install.serpantinum.dev | bash"
     ]
 }

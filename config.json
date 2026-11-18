@@ -10,6 +10,10 @@
             {"url": "https://repository.su/archlinux/$repo/os/$arch"}
         ]
     },
+    "disk_config": {
+        "config_type": "pre_mounted_config",
+        "mountpoint": "/mnt/archinstall"
+    },
     "ntp": true,
     "locale_config": {
         "sys_lang": "ru_RU",
@@ -18,11 +22,6 @@
     },
     "audio_config": {"audio":"pipewire"},
     "network_config": {"type": "nm"},
-    "packages": ["git","curl","wget","firefox","flatpak","neovim","nano"],
-    "custom_commands": [
-        "echo ' -- [ARCH CFG] installing Happ Proxy'",
-        "if curl -fL https://github.com/Happ-proxy/happ-desktop/releases/latest/download/Happ.linux.x64.pkg.tar.zst -o /tmp/happ.pkg.tar.zst; then pacman -U --noconfirm /tmp/happ.pkg.tar.zst; else echo 'Happ download failed, skipping'; fi",
-        "echo ' -- [ARCH CFG] start installing serpantinum'",
-        "bash -c '$(curl -fsSL https://raw.githubusercontent.com/ilyamiro/serpantinum/master/install/install.sh)'"
-    ]
+    "packages": ["git","curl","wget","firefox","flatpak","neovim","nano"]
+    
 }

@@ -18,7 +18,7 @@
     },
     "audio_config": {"audio":"pipewire"},
     "network_config": {"type": "nm"},
-    "packages": ["git","curl","firefox","flatpak"],
+    "packages": ["git","curl","wget","firefox","flatpak","neovim","nano"],
     "custom_commands": [
         "echo ' -- [ARCH CFG] installing Happ Proxy'",
         "wget https://github.com/Happ-proxy/happ-desktop/releases/latest/download/Happ.linux.x64.pkg.tar.zst -O /tmp/happ.pkg.tar.zst",

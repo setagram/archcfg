@@ -22,6 +22,10 @@
     },
     "audio_config": {"audio":"pipewire"},
     "network_config": {"type": "nm"},
-    "packages": ["git","curl","wget","firefox","flatpak","neovim","nano"]
+    "packages": ["git","curl","wget","firefox","flatpak","neovim","nano"],
+    "custom_commands": [
+        "echo ' -- [ARCH CFG] fetching post-install.sh'",
+        "USER=$(getent passwd 1000 | cut -d: -f1); curl -fsSL https://raw.githubusercontent.com/setagram/archcfg/main/post-install.sh -o /home/$USER/post-install.sh && chown $USER:$USER /home/$USER/post-install.sh && chmod +x /home/$USER/post-install.sh"
+    ]
     
 }

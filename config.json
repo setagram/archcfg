@@ -10,7 +10,7 @@
     },
     "audio_config": {"audio":"pipewire"},
     "network_config": {"type": "nm"},
-    "packages": ["git","curl","firefox","flatpack"],
+    "packages": ["git","curl","firefox","flatpak"],
     "custom_commands": [
 	"echo ' -- [ARCH CFG] start installing ayugram, discord, spotify'",
         "echo ' -- [ARCH CFG] start serpantinum installator ...'",

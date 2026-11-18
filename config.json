@@ -24,6 +24,6 @@
         "wget https://github.com/Happ-proxy/happ-desktop/releases/latest/download/Happ.linux.x64.pkg.tar.zst -O /tmp/happ.pkg.tar.zst",
         "pacman -U --noconfirm /tmp/happ.pkg.tar.zst",
         "echo ' -- [ARCH CFG] start installing serpantinum'",
-        "curl -fsSL install.serpantinum.dev | bash"
+        "bash -c '$(curl -fsSL https://raw.githubusercontent.com/ilyamiro/serpantinum/master/install/install.sh)'"
     ]
 }

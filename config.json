@@ -4,15 +4,16 @@
     "kernels": ["linux", "linux-lts"],
     "ntp": "true",
     "locale_config": {
-        "sys_lang": "en_US",
+        "sys_lang": "ru_RU",
         "sys_enc": "UTF-8",
         "kb_layout": "us"
     },
     "audio_config": {"audio":"pipewire"},
     "network_config": {"type": "nm"},
-    "packages": ["git","curl","firefox"],
+    "packages": ["git","curl","firefox","flatpack"],
     "custom_commands": [
-        "echo базовая установка завершена. запускается установщик serpantinum ...'",
+	"echo ' -- [ARCH CFG] start installing ayugram, discord, spotify'",
+        "echo ' -- [ARCH CFG] start serpantinum installator ...'",
         "curl -fsSL install.serpantinum.dev | sh"
     ]
 }

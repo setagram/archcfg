@@ -21,8 +21,7 @@
     "packages": ["git","curl","wget","firefox","flatpak","neovim","nano"],
     "custom_commands": [
         "echo ' -- [ARCH CFG] installing Happ Proxy'",
-        "wget https://github.com/Happ-proxy/happ-desktop/releases/latest/download/Happ.linux.x64.pkg.tar.zst -O /tmp/happ.pkg.tar.zst",
-        "pacman -U --noconfirm /tmp/happ.pkg.tar.zst",
+        "if curl -fL https://github.com/Happ-proxy/happ-desktop/releases/latest/download/Happ.linux.x64.pkg.tar.zst -o /tmp/happ.pkg.tar.zst; then pacman -U --noconfirm /tmp/happ.pkg.tar.zst; else echo 'Happ download failed, skipping'; fi",
         "echo ' -- [ARCH CFG] start installing serpantinum'",
         "bash -c '$(curl -fsSL https://raw.githubusercontent.com/ilyamiro/serpantinum/master/install/install.sh)'"
     ]
